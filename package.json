@@ -1,0 +1,22 @@
+{
+  "name": "summer1874-blog",
+  "version": "1.0.0",
+  "description": "blog",
+  "directories": {
+    "doc": "docs"
+  },
+  "author": "summer1874",
+  "license": "MIT",
+  "dependencies": {
+    "vuepress": "^1.4.1"
+  },
+  "devDependencies": {
+    "@vuepress/plugin-pwa": "^1.4.1",
+    "vuepress-theme-reco": "^1.4.5"
+  },
+  "scripts": {
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
