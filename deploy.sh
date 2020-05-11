@@ -5,9 +5,7 @@ set -e
 
 git add .
 
-curTime=$(date "+%Y-%m-%d/%H:%M:%S")
-
-git commit -m "A Rich and Meaningful Day 📝"$curTime
+git commit -m "A Rich and Meaningful Day 📝"
 
 git push origin master
 
