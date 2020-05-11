@@ -6,7 +6,7 @@ categories:
   -  Study
 tags:
   - every day
-top: 1
+sticky: 1
 --- 
 # 贪婪与焦虑督促着我
 >一个头脑正常的人，是不会自满的。 —— 圣西门

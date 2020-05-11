@@ -6,7 +6,8 @@ categories:
   -  Coding
 tags:
   - upupup!
-top: 3
+keys: 
+  - e10adc3949ba59abbe56e057f20f883e
 ---
 #### 二叉树
 **ES5 prototype 实现**
