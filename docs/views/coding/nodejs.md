@@ -6,6 +6,8 @@ categories:
   -  Coding
 tags:
   - node.js
+keys:
+  - a0c280fb6cb59d4e8f9d0c9eded5d346
 ---
 
 ### 使用nvm管理node

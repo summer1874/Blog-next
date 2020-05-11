@@ -1,6 +1,7 @@
 module.exports = {
   title: 'SUMMER-1874',
   theme: 'reco',
+  dest: 'blog',
   description: '当我沉默的时候，我觉得很充实，当我开口说话，就感到了空虚。',
   head: [
     ['meta', { name: 'viewport', content: 'width=device-width,initial-scale=1,user-scalable=no' }]
@@ -42,7 +43,21 @@ module.exports = {
       appId: 'lNUTeNc4FOXX9ay6udnzx1Rq-gzGzoHsz',// your appId
       appKey: 'RLEywQDFJXlC5u1CehjveQse', // your appKey
       placeholder: '我有一言，不知当  不当讲'
-    }
+    },
+    friendLink: [
+      {
+        title: '午后南杂',
+        desc: 'Enjoy when you can, and endure when you must.',
+        email: '1156743527@qq.com',
+        link: 'https://www.recoluan.com'
+      },
+      {
+        title: 'vuepress-theme-reco',
+        desc: 'A simple and beautiful vuepress Blog & Doc theme.',
+        avatar: "https://vuepress-theme-reco.recoluan.com/icon_vuepress_reco.png",
+        link: 'https://vuepress-theme-reco.recoluan.com'
+      },
+    ]
   },
   plugins: [
     'vuepress-plugin-cat',
@@ -53,20 +68,26 @@ module.exports = {
           {
             name: '亡灵序曲',
             artist: 'Alsace',
-            url: 'https://m801.music.126.net/20200511113434/c5be44787e7112844f0f7008b8bb98df/jdyyaac/0e0c/525d/040f/9ffd4abf5ce721eb2cb63e57fa5d8e22.m4a',
+            url: 'http://bucket-ce5b96a087.oss-cn-shenzhen.aliyuncs.com/wms/download/9ef29dbb23744946b98fde259998ace7.m4a',
             cover: 'http://p2.music.126.net/ln6JQjI3BR156RAcLeoQqA==/109951163150014632.jpg?param=130y130'
           },
           {
             name: 'Vakning að elska',
             artist: 'Misha Mishenko',
-            url: 'https://m701.music.126.net/20200511114028/d68fc825bfcc4a42f1978759949cac81/jdyyaac/560c/0e5a/515b/af4e49871290808ef605f114d4f5cccc.m4a',
+            url: 'http://bucket-ce5b96a087.oss-cn-shenzhen.aliyuncs.com/wms/download/00290565108340d78281f18d20e58ed2.m4a',
             cover: 'http://p1.music.126.net/euyNgFymq6C7ER1Rao4fsw==/2455209464868207.jpg?param=130y130'
           },
           {
             name: 'Teenage Summer Days',
             artist: 'David Arthur Brown',
-            url: 'https://m701.music.126.net/20200511114342/accdb2857eeec384d304794682a9a3e3/jdyyaac/560f/0e5c/0f5e/ae9a9531cf969a24ac4e844cc9ea8f62.m4a',
+            url: 'http://bucket-ce5b96a087.oss-cn-shenzhen.aliyuncs.com/wms/download/b6e7d2038f024ea09d0039e5f47511b9.m4a',
             cover: 'http://p2.music.126.net/VYCboMUhUn55MZmVbaOLQw==/6641050231992624.jpg?param=130y130'
+          },
+          {
+            name: 'いつも何度でも',
+            artist: '竹仲絵里',
+            url: 'http://bucket-ce5b96a087.oss-cn-shenzhen.aliyuncs.com/wms/download/a5c50295f97f4a42a413906203a9118c.m4a',
+            cover: 'http://p2.music.126.net/qpTKrDa6kux6oIje-DLXcQ==/635517720875780.jpg?param=130y130'
           }
         ]
       }
