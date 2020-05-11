@@ -15,7 +15,7 @@ git push origin master
 yarn run build
 
 # 进入生成的文件夹
-cd dist
+cd blog
 
 # 如果是发布到自定义域名
 echo 'summer1874.top' > CNAME
