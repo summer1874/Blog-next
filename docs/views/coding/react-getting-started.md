@@ -2,9 +2,10 @@
 layout: post
 title: "🧶 react 学习笔记"
 date: 2019-07-11
-category: Coding
+categories: 
+  - Coding
 tags:
-  - REACT
+  - react
 ---
 
 $$\frac {\partial^r} {\partial \omega^r} \left(\frac {y^{\omega}} {\omega}\right) 

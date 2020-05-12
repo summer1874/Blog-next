@@ -918,6 +918,8 @@ function toBoolean(something: string | number): boolean {
 // index.ts(2,10): error TS2352: Type 'string | number' cannot be converted to type 'boolean'.
 //   Type 'number' is not comparable to type 'boolean'.
 ```
+
+## [声明文件](https://ts.xcatliu.com/basics/declaration-files#sheng-ming-wen-jian-zhong-de-yi-lai)
 ## 内置对象
 
 JavaScript 中有很多[内置对象][]，它们可以直接在 TypeScript 中当做定义好了的类型。
