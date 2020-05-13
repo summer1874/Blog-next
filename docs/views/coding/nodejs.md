@@ -46,3 +46,10 @@ $ nvm install [version][arch] //安装指定版本的node 例如：nvm install 1
 $ nvm use [version] //使用node 例如：nvm use 10.16.3
 $ nvm uninstall [version] //卸载node
 ```
+
+## npx
+1. 避免全局安装
+2. 调用项目内部安装模块
+```bash
+npx <package> --version
+```

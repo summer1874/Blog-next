@@ -95,8 +95,57 @@ const spanStyle = {
 
 
 ## hooks
+### React 16.8带来的全新特性, 即将替代class组件的写法
+```ts
+import React from 'react'
+
+interface IProps{
+  message: string
+}
+class Hello extends React.Component<IProps> {
+  render() {
+    return (
+      <h2>{ this.props.message  }</h2>
+    )
+  }
+}
+export default Hello
+```
+```ts
+import React from 'react'
+
+interface HelloProps {
+  message: string
+}
+const Hello:React.FC<HelloProps> = (props) => {
+  return <h2>{ props.message }</h2>
+}
+
+Hello.defaultProps = {
+  message: 'hello world'
+}
+
+export default Hello
+```
+### 没有破坏性改动
+1. 完全可选
+2. 百分百向后兼容
+3. 没有计划从 React 中移除 class
+
+### hook所解决的痛点
+1. 组件很难服用状态逻辑
+2. 复杂组件难以理解，尤其是生命周期函数
 
 
+### useState
+- `useState`是`react`自带的一个`hook`函数，它的作用就是用来声明状态变量。
+- `useState`这个函数接收的参数是我们的状态初始值（`initial state`），它返回了一个数组，这个数组的第`[0]`项是当前当前的状态值，第`[1]`项是可以改变状态值的方法函数。
+
+### useEffect
+我们写的有状态组件，通常会产生很多的副作用（`side effect`）
+- 比如发起ajax请求获取数据，添加一些监听的注册和取消注册，手动修改dom等等。
+- 我们之前都把这些副作用的函数写在生命周期函数钩子里，比如`componentDidMount`，`componentDidUpdate和componentWillUnmount`。
+- 而现在的`useEffect`就相当与这些声明周期函数钩子的集合体。它以一抵三。
 
 ## 基础语法
 ```js
@@ -176,7 +225,7 @@ dangerouslySetInnerHTML={{_html: item}}
 <label htmlFor="name">
 <input id="name "/>
 ```
-原理进阶
+<!-- 原理进阶
 动画
 redux
 redux进阶
@@ -302,4 +351,4 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
- ```
+ ``` -->
