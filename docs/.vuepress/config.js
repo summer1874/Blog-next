@@ -4,6 +4,15 @@ module.exports = {
   dest: 'blog',
   description: '当我沉默的时候，我觉得很充实，当我开口说话，就感到了空虚。',
   head: [
+    ['link', { rel: 'icon', href: '/favicon.ico' }],
+    ['link', { rel: 'manifest', href: '/manifest.json' }],
+    ['meta', { name: 'theme-color', content: '#1e90ff' }],
+    ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
+    ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
+    ['link', { rel: 'apple-touch-icon', href: '/icons/icon128.jpg' }],
+    ['link', { rel: 'mask-icon', href: '/icons/icon128.svg', color: '#1e90ff' }],
+    ['meta', { name: 'msapplication-TileImage', content: '/icons/icon128.jpg' }],
+    ['meta', { name: 'msapplication-TileColor', content: '#000000' }],
     ['meta', { name: 'viewport', content: 'width=device-width,initial-scale=1,user-scalable=no' }]
   ],
   themeConfig: {

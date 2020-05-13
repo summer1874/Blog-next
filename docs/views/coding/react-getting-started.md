@@ -6,6 +6,8 @@ categories:
   - Coding
 tags:
   - react
+keys:
+  - a0c280fb6cb59d4e8f9d0c9eded5d346
 ---
 
 $$\frac {\partial^r} {\partial \omega^r} \left(\frac {y^{\omega}} {\omega}\right) 
