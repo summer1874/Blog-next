@@ -9,20 +9,17 @@ tags:
 ---
 
 ## 字母排序
-
-<englishTable :titles="titles" :json="english"/>
+<englishTableByEl :json="english"/>
 
 ## 音标
 
 <phonetic/>
 
-['', '', '', '']
 
 <script>
 export default {
   data () {
     return {
-      titles: 'A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z',
       english: {
         A: [
           ['A', '/eɪ/', 'n. 英语字母表的第1个字母；A音；A类；干线公路；最高收入群体；第一列；第一已知量；表层土壤；A型血；A型号纸；A字形</br>abbr. 安培 (AMPERE)；A纸牌 (ACE)；……比…… (AGAINST)'],
@@ -96,6 +93,7 @@ export default {
           ['query', '/ˈkwɪri/', 'n. 疑问，质问；疑问号 ；[计] 查询</br>vt. 询问；对……表示疑问</br>vi. 询问；表示怀疑']
         ],
         R: [
+          ['row', '/rəʊ/', 'n. 行，排；划船；街道；吵闹</br>vt. 划船；使……成排</br>vi. 划船；争吵</br>n. (Row)人名；(英)罗'],
           ['read', '/riːd/', 'vt. 阅读；读懂，理解</br>vi. 读；读起来</br>n. 阅读；读物</br>adj. 有学问的</br>n. (Read)人名；(英)里德'],
           ['readonly', '', 'adj. 只读的'],
           ['request', '/rɪˈkwest/', 'n. 请求；需要</br>vt. 要求，请求', 're·quest'],

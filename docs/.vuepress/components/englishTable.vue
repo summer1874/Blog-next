@@ -98,8 +98,9 @@ export default {
       this.popperType = true;
       this.popperText = word;
       this.$nextTick(() => {
-        this.styleObject.top = this.getElementViewTop(event.target) -  this.$refs['popper'].offsetHeight + "px";
-        this.styleObject.left = this.getElementViewLeft(event.target) - (this.$refs['popper'].offsetWidth / 2) + (event.target.offsetWidth /2) + "px";
+        this.styleObject.top = this.getElementViewTop(event.target) -  document.querySelector('.popper').offsetHeight + "px";
+        this.styleObject.left = this.getElementViewLeft(event.target) - (document.querySelector('.popper').offsetWidth / 2) + (event.target.offsetWidth /2) + "px";
+        console.log(this.getElementViewTop(event.target),this.getElementViewLeft(event.target) )
       });
     },
     getElementViewTop(element) {

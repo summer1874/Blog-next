@@ -255,7 +255,7 @@ $ git push [remote] --force
 # 推送所有分支到远程仓库
 $ git push [remote] --all
 ```
-## 九、撤销
+### 九、撤销
 
 ```bash
 # 恢复暂存区的指定文件到工作区
@@ -356,7 +356,7 @@ ssh-add
 ```
 >ssh-agent是用于管理密钥，ssh-add用于将密钥加入到ssh-agent中，SSH可以和ssh-agent通信获取密钥，这样就不需要用户手工输入密码了。 
 
-### git删除远程文件夹或文件的方法
+## git删除远程文件夹或文件的方法
 
 具体操作步骤如下：
 
@@ -380,10 +380,91 @@ git push origin master
   git commit -m "msg"
   git push origin master
 ```
+
+## cherry-pick的使用
+1. 将指定的提交（commit）应用于其他分支。
+```bash
+$ git cherry-pick <commitHash>
+```
+2. 转移该分支的最新提交
+```bash
+$ git cherry-pick <branchName>
+```
+3. 转移多个提交
+```bash
+$ git cherry-pick <HashA> <HashB>
+```
+4. 不包含 HashA , 转移一系列的连续提交
+```bash
+$ git cherry-pick <HashA>..<HashD>
+```
+5. 包含提交 HashA
+```bash
+$ git cherry-pick <HashA>^..<HashD>
+```
+6. 打开外部编辑器，编辑提交信息。
+```bash
+$ git cherry-pick (-e | --edit)
+```
+7. 只更新工作区和暂存区，不产生新的提交。
+```bash
+$ git cherry-pick (-n | --no-commit)
+```
+8. 在提交信息的末尾追加一行(cherry picked from commit ...)，方便以后查到这个提交是如何产生的。
+```bash
+$ git cherry-pick (-x | --edit)
+```
+9. 在提交信息的末尾追加一行操作者的签名，表示是谁进行了这个操作。
+```bash
+$ git cherry-pick (-s | --signoff)
+```
+10. 如果原始提交是一个合并节点，来自于两个分支的合并，那么 Cherry pick 默认将失败，因为它不知道应该采用哪个分支的代码变动。-m配置项告诉 Git，应该采用哪个分支的变动。它的参数parent-number是一个从1开始的整数，代表原始提交的父分支编号。
+```bash
+$ git cherry-pick (-m parent-number | --mainline parent-number)
+```
+11. - 用户解决代码冲突后，第一步将修改的文件重新加入暂存区（git add .），第二步使用下面的命令，让 Cherry pick 过程继续执行。
+    - 跳过当前提交并继续执行其余的序列。
+    - 发生代码冲突后，放弃合并，回到操作前的样子。
+    - 发生代码冲突后，退出 Cherry pick，但是不回到操作前的样子。
+```bash
+$ git cherry-pick (--continue | --skip | --abort | --quit)
+```
+## git commit 规范
+```
+<type>(<scope>): <subject>
+<BLANK LINE>
+<body>
+<BLANK LINE>
+<footer>
+
+
+feat(*): add page
+add pages
+resolve #001
+```
+#### 通过 git commit 命令带出的 vim 界面填写的最终结果应该类似如上这个结构, 大致分为三个部分(使用空行分割):
+- 标题行: 必填, 描述主要修改类型和内容
+- 主题内容: 描述为什么修改, 做了什么样的修改, 以及开发的思路等等
+- 页脚注释: 放 Breaking Changes 或 Closed Issues
+
+#### 分别由如下部分构成:
+- type: commit 的类型
+- feat: 新特性
+- fix: 修改问题
+- refactor: 代码重构
+- docs: 文档修改
+- style: 代码格式修改, 注意不是 css 修改
+- test: 测试用例修改
+- chore: 其他修改, 比如构建流程, 依赖管理.
+- scope: commit 影响的范围, 比如: route, component, utils, build...
+- subject: commit 的概述, 建议符合  50/72 formatting
+- body: commit 具体修改内容, 可以分为多行, 建议符合 50/72 formatting
+- footer: 一些备注, 通常是 BREAKING CHANGE 或修复的 bug 的链接.
+这样一个符合规范的 commit message, 就好像是一份邮件.
 ### git 大纲
 ![git 大纲](https://pic.downk.cc/item/5e7852a45c5609112978b039.png)
 #### 参考
 
 [Git Cheat Sheet 中文版](https://github.com/flyhigher139/Git-Cheat-Sheet)
-
 [Git教程 廖雪峰的官方网站](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000)
+[阿里南京技术专刊](https://juejin.im/post/5afc5242f265da0b7f44bee4)

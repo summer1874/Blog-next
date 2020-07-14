@@ -89,7 +89,7 @@ itemStyle()
     .fixed
       backdrop(fixed)
     .item
-      itemStyle()
+      itemStyle() 
 
 section 
   height 100vh
