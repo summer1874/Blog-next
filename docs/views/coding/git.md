@@ -461,7 +461,20 @@ resolve #001
 - body: commit 具体修改内容, 可以分为多行, 建议符合 50/72 formatting
 - footer: 一些备注, 通常是 BREAKING CHANGE 或修复的 bug 的链接.
 这样一个符合规范的 commit message, 就好像是一份邮件.
-### git 大纲
+
+## git 覆盖另一个分支
+```bash
+git checkout better_branch
+git merge --strategy=ours master    # keep the content of this branch, but record a merge
+git checkout master
+git merge better_branch             # fast-forward master up to the merge
+
+# 如果您想更清楚地了解历史记录，建议您向合并提交消息中添加一些信息，以使您清楚自己所做的事情。将第二行更改为：
+
+git merge --strategy=ours --no-commit master
+git commit          # add information to the template merge message
+```
+## git 大纲
 ![git 大纲](https://pic.downk.cc/item/5e7852a45c5609112978b039.png)
 #### 参考
 
