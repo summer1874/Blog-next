@@ -482,6 +482,8 @@ git branch -r | grep -v '\->' | while read remote; do git branch --track "${remo
 git fetch --all
 git pull --all
 ```
+[How to fetch all Git branches](https://stackoverflow.com/questions/10312521/how-to-fetch-all-git-branches)
+
 ## git 大纲
 ![git 大纲](https://pic.downk.cc/item/5e7852a45c5609112978b039.png)
 #### 参考
