@@ -474,6 +474,14 @@ git merge better_branch             # fast-forward master up to the merge
 git merge --strategy=ours --no-commit master
 git commit          # add information to the template merge message
 ```
+
+## git 从远程仓库获取所有分支
+```bash
+git clone xxx
+git branch -r | grep -v '\->' | while read remote; do git branch --track "${remote#origin/}" "$remote"; done
+git fetch --all
+git pull --all
+```
 ## git 大纲
 ![git 大纲](https://pic.downk.cc/item/5e7852a45c5609112978b039.png)
 #### 参考
